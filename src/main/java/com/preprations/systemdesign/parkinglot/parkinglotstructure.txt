@@ -1,0 +1,32 @@
+com.parkinglot
+├── model
+│   ├── enums
+│   │   ├── ParkingSpotType.java
+│   │   └── VehicleType.java
+│   ├── person
+│   │   ├── Person.java
+│   │   └── Admin.java
+│   ├── vehicle
+│   │   ├── Vehicle.java
+│   │   ├── Car.java
+│   │   ├── Bike.java
+│   │   ├── Truck.java
+│   │   └── ElectricCar.java
+│   ├── spot
+│   │   ├── ParkingSpot.java
+│   │   ├── HandicappedSpot.java
+│   │   ├── CompactSpot.java
+│   │   ├── LargeSpot.java
+│   │   ├── ElectricSpot.java
+│   │   └── MotorbikeSpot.java
+│   ├── ticket
+│   │   └── ParkingTicket.java
+│   ├── panel
+│   │   ├── EntrancePanel.java
+│   │   └── ExitPanel.java
+│   ├── floor
+│   │   └── ParkingFloor.java
+│   ├── board
+│   │   └── DisplayBoard.java
+│   └── ParkingLot.java
+└── Main.java

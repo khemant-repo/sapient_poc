@@ -1,0 +1,14 @@
+# Basic Maths problem
+
+1. Count digits
+2. reverse number
+3. check palindrome : number which is same after reverse (eg. 121, 1331 etc)
+4. Armstrong number : number whose sum of each digit cube is the number itself.
+eg. [ 371 , so 3^3 + 7^3 + 1^3 = 371 ], [1634 is also armstrong], [35 is not armstrong number]
+5. print all divisions [36, {1,2,3,4,6,8,9,12,18,36}]
+6. check prime number [exactly 2 factors, 1 and itself {2,3,5,7,..}]
+7. find gcd/hcf of given two numbers [(n1=9, n2=12) , gcd(9,12) is 3]
+
+# hashing problem
+
+1. find frequency of each number.
