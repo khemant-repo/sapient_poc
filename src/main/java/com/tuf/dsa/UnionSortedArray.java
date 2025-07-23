@@ -13,8 +13,8 @@ public class UnionSortedArray {
         List<Integer> arr2 = Arrays.asList(2, 3, 4, 4, 5, 11, 12);
         List<Integer> unionArray = new ArrayList<>();
 
-        //unionArray = union(arr1,arr2);
-        unionArray = unionJava8(arr1,arr2);
+        unionArray = union(arr1,arr2);
+        //unionArray = unionJava8(arr1,arr2);
         ArrayUtil.print(unionArray);
     }
 
@@ -91,31 +91,33 @@ public class UnionSortedArray {
         List<Integer> unionArray = new ArrayList<>();
         int index1 = 0;
         int index2 = 0;
-        while(index1< arr1.size() && index2 < arr2.size()){
-            if( arr1.get(index1) < arr2.get(index2)){
-                if(unionArray.size() == 0 || unionArray.getLast() != arr1.get(index1)){
+
+        while(index1 < arr1.size() && index2 < arr2.size()){
+            if(arr1.get(index1) <= arr2.get(index2) ){
+                if(unionArray.size() == 0 || !unionArray.contains(arr1.get(index1))){
                     unionArray.add(arr1.get(index1));
                 }
                 index1++;
-            }else {
-                if(unionArray.size() == 0 || unionArray.getLast() != arr2.get(index2)){
+
+            }else{
+                if(unionArray.size() == 0 || !unionArray.contains(arr2.get(index2))){
                     unionArray.add(arr2.get(index2));
-                }
+                } index2++;
+            }
+        }
+        while (index1 < arr1.size()){
+            if(!unionArray.contains(arr1.get(index1))){
+                unionArray.add(arr1.get(index1));
+                index1++;
+            }
+        }
+        while(index2 < arr2.size()){
+            if(!unionArray.contains(arr2.get(index2))){
+                unionArray.add(arr2.get(index2));
                 index2++;
             }
         }
-        while(index1 < arr1.size()){
-            if(unionArray.size() == 0 || unionArray.getLast() != arr1.get(index1)){
-                unionArray.add(arr1.get(index1));
-            }
-            index1++;
-        }
-        while(index2 < arr2.size()){
-            if(unionArray.size() == 0 || unionArray.getLast() != arr2.get(index2)){
-                unionArray.add(arr2.get(index2));
-            }
-            index2++;
-        }
+
         return unionArray;
     }
 }

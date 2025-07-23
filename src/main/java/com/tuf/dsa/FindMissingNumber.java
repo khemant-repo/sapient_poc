@@ -1,4 +1,4 @@
-package com.tuf.dsa.java11;
+package com.tuf.dsa;
 
 import java.util.ArrayList;
 import java.util.Arrays;

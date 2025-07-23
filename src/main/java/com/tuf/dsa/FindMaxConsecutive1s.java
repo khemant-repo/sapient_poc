@@ -1,9 +1,47 @@
 package com.tuf.dsa;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.stream.IntStream;
 
 public class FindMaxConsecutive1s {
     public static void main(String[] args) {
+        //findMaxConsucutive1();
+
+        List<Integer> nums = Arrays.asList(1,1,0,1,1,1,0,0,1,1,1,1,0,1);
+
+        int max = 0;
+        int count = 0;
+        for (int i=0; i< nums.size(); i++){
+            if(nums.get(i)==1){
+                count++;
+                max = Math.max(count,max);
+            }else {
+                count=0;
+            }
+        }
+
+        System.out.println("maxx conscutive 1's is: "+max);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    private static void findMaxConsucutive1() {
         IntStream arr = IntStream.of(1, 1, 0, 1, 1, 1, 0, 1);
 
         // Convert stream to array since stream is single-use
@@ -22,7 +60,6 @@ public class FindMaxConsecutive1s {
         }
 
         System.out.println("Maximum consecutive 1s: " + maxCount);
-        
     }
-    
+
 }

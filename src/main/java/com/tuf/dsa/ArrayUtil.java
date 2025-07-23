@@ -1,6 +1,7 @@
 package com.tuf.dsa;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 public class ArrayUtil {
 
@@ -12,8 +13,7 @@ public class ArrayUtil {
     }
 
     public static void print(List<Integer> array) {
-        for (int i=0 ; i< array.size(); i++){
-            System.out.print(array.get(i) +" ");
-        }
+        Stream.of(array)
+                .forEach(System.out::println);
     }
 }
