@@ -1,9 +1,8 @@
 package com.tuf.dsa;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import com.tuf.dsa.arrays.ArrayUtil;
+
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -12,10 +11,28 @@ public class UnionSortedArray {
         List<Integer> arr1 = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         List<Integer> arr2 = Arrays.asList(2, 3, 4, 4, 5, 11, 12);
         List<Integer> unionArray = new ArrayList<>();
-
-        unionArray = union(arr1,arr2);
+        unionArray = brute(arr1,arr2);
+        //unionArray = union(arr1,arr2);
         //unionArray = unionJava8(arr1,arr2);
         ArrayUtil.print(unionArray);
+    }
+
+    private static List<Integer> brute(List<Integer> arr1, List<Integer> arr2) {
+        Set<Integer> uniquedata = new HashSet<>();
+
+        for (int i=0; i< arr1.size(); i++ ){
+            uniquedata.add(arr1.get(i));
+        }
+
+        for (int i=0; i< arr2.size(); i++ ){
+            uniquedata.add(arr2.get(i));
+        }
+        List<Integer> uniqueArray = new ArrayList<>();
+
+        for (int i : uniquedata){
+            uniqueArray.add(i);
+        }
+        return uniqueArray;
     }
 
     /**

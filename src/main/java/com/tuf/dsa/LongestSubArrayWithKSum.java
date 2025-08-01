@@ -13,9 +13,9 @@ public class LongestSubArrayWithKSum {
     public static void main(String[] args) {
         List<Integer> nums = Arrays.asList(1,2,3,1,1,1,1,4,2,3);
         int requiredSum = 6;
-        //int longestSubArrLeng = brute(nums,requiredSum);
+        int longestSubArrLeng = brute(nums,requiredSum);
         //int longestSubArrLeng = better(nums,requiredSum);
-        int longestSubArrLeng = optimal(nums,requiredSum);
+        //int longestSubArrLeng = optimal(nums,requiredSum);
         System.out.println("Longest sub Array :"+longestSubArrLeng);
 
     }
@@ -60,7 +60,6 @@ public class LongestSubArrayWithKSum {
         Map<Long,Integer> preSumMap = new HashMap<>();
 
         for (int i=0; i< nums.size(); i++){
-
             sum += nums.get(i);
             if(sum==requiredSum){
                 maxLen = Math.max(maxLen,i+1);
@@ -69,7 +68,7 @@ public class LongestSubArrayWithKSum {
             long rem = sum-requiredSum;
 
             if(preSumMap.containsKey(rem)){
-                int len = i-  preSumMap.get(rem);
+                int len = i- preSumMap.get(rem);
                 maxLen = Math.max(maxLen,len);
             }
 
@@ -86,10 +85,8 @@ public class LongestSubArrayWithKSum {
         int length=0;
         for (int i=0; i< nums.size(); i++){
             int sum = 0;
-
             for (int j=i; j< nums.size(); j++){
-
-                sum = sum + nums.get(j);
+                sum += nums.get(j);
                 if(sum == requiredSum){
                     length = Math.max(length, j-i+1);
                 }

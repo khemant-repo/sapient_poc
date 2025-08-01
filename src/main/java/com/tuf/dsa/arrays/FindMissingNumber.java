@@ -1,4 +1,4 @@
-package com.tuf.dsa;
+package com.tuf.dsa.arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,9 +8,28 @@ import java.util.List;
 public class FindMissingNumber {
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(1,2,4,5);
+        int n = 5;
        findMissingNumber(numbers);
+        int missingNumber = brute(numbers,n);
       //  findMissingNumberXor(numbers);
        // findMissingNumberBetter(numbers);
+    }
+
+    private static int brute(List<Integer> numbers, int n) {
+        int missingElement = -1;
+        for (int i=1; i<=n ;i++){
+            int flag = 0;
+            for (int j = 0;j<numbers.size(); j++){
+                if(i==numbers.get(j)){
+                    flag = 1;
+                    break;
+                }
+            }
+            if(flag==0)
+                missingElement = i ;
+            break;
+        }
+        return missingElement;
     }
 
     private static void findMissingNumberBetter(List<Integer> numbers) {

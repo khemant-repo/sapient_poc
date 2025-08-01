@@ -213,7 +213,7 @@ public class StreamUtil {
 
     private static void collect1() {
         Stream<String> strStream = Stream.of("ad", "ju", "di", "cate");
-        var result = strStream.collect(() -> new StringBuilder(),
+        var result = strStream.collect(StringBuilder::new,
                 (sb, str) -> sb.append(str),
                 (sb1, sb2) -> sb1.append(sb2));
 
@@ -338,11 +338,11 @@ public class StreamUtil {
 
     public static void practiceTerminalOperations() {
 
-        /*minMaxComparator();
-        findFirstFindAny();
-        anyMatchAllMatchNoneMatch();
-        streamForEachExample();
-        reduceMethodExample();*/
+//        minMaxComparator();
+//        findFirstFindAny();
+//        anyMatchAllMatchNoneMatch();
+//        streamForEachExample();
+//        reduceMethodExample();
         practiceCollect();
     }
 
@@ -390,7 +390,7 @@ public class StreamUtil {
     }
 
     private static void streamForEachExample() {
-        System.out.println("foreach  take consumer and doesnot return any value, not a reduction.");
+        System.out.println("foreach  take consumer and does not return any value, not a reduction.");
         Stream.of("Hemant", "Muskan", "Vaidik", "Vedasnh").forEach(System.out::println);
     }
 

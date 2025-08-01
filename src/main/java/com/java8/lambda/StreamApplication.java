@@ -13,10 +13,10 @@ public class StreamApplication {
     public static void main(String[] args) {
 
         //factorial();
-        //currentMemory();
-        //streamPractice();
-        // internal();
-        sdGLobal();
+       // currentMemory();
+        streamPractice();
+      /*   internal();
+        sdGLobal();*/
 
     }
 
@@ -98,14 +98,14 @@ public class StreamApplication {
     }
 
     private static void streamPractice() {
-//        StreamUtil.exploreCreateStream();
-//        StreamUtil.practiceFilter();
-        //  StreamUtil.practiceTerminalOperations();
+       // StreamUtil.exploreCreateStream();
+       // StreamUtil.practiceFilter();
+          StreamUtil.practiceTerminalOperations();
         //    StreamUtil.practiceIntermediateOPerations();
         //StreamUtil.practicePrimitiveStream();
         //StreamUtil.practiceOptional();
-        StreamUtil.practiceParallelStream();
-        StreamUtil.toMapExample();
+        //StreamUtil.practiceParallelStream();
+     //   StreamUtil.toMapExample();
 //        StreamUtil.reverseEachWord();
         //  StreamUtil.practiceCollect();
         //  StreamUtil.practiceGroupingBy();

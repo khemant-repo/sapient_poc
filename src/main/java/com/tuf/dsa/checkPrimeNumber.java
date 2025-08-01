@@ -3,6 +3,22 @@ package com.tuf.dsa;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * A prime number is a natural number greater than 1 that has exactly two distinct positive divisors:
+ * 1 and itself.
+ *
+ * ✅ Examples of Prime Numbers:
+         * 2 (only divisible by 1 and 2)
+         * 3 (only divisible by 1 and 3)
+         * 5, 7, 11, 13, 17, 19, 23, 29, 31, ...
+         * ✅ Note: 2 is the only even prime number — all other even numbers are divisible by 2.
+
+ * ❌ Non-Prime (Composite) Examples:
+         * 1 → has only one divisor (not prime)
+         * 4 → divisible by 1, 2, 4
+         * 6 → divisible by 1, 2, 3, 6
+         * 9 → divisible by 1, 3, 9
+ */
 public class checkPrimeNumber {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8);

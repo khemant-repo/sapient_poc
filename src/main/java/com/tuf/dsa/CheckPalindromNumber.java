@@ -1,9 +1,22 @@
 package com.tuf.dsa;
 
+/**
+ * A palindrome number is a number that reads the same forward and backward.
+
+ * Example Palindrome:
+ * 121 → reverse is 121
+ * 1331 → reverse is 1331
+ * 12321 → reverse is 12321
+ * 7 → reverse is 7
+
+ Example not Palindrome:
+   123 → reverse is 321
+   4567 → reverse is 7654
+ */
 public class CheckPalindromNumber {
     public static void main(String[] args) {
 
-        int n = 1219;
+        int n = 121;
 
 
        if(isPlindrome(n)){
