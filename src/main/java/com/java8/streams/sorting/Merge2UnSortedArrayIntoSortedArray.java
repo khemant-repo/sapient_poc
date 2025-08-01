@@ -10,7 +10,7 @@ import java.util.stream.IntStream;
  * ii.	int[] b = new int[] {8, 3, 9, 5};
  * b.	Output: [1, 2, 3, 4, 5, 7, 8, 9]
  */
-public class Mere2UnSortedArrayIntoSortedArray {
+public class Merge2UnSortedArrayIntoSortedArray {
     public static void main(String[] args) {
         int[] a = {4, 2, 7, 1};
         int[] b = {8, 3, 9, 5,1};
